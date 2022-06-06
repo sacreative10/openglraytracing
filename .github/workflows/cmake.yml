@@ -36,4 +36,9 @@ jobs:
       # Execute tests defined by the CMake configuration.  
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest -C ${{env.BUILD_TYPE}}
+    - name: Publish Executable
+      uses: actions/upload-artifact@v2
+      with:
+        name: Windows Executable
+        path: ${{github.workspace}}\build\Release\OpenGLRaytracing.exe
       
