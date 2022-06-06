@@ -7,13 +7,22 @@
 #include <cmath>
 #include <chrono>
 #include <vector>
+// if on Windows, include windows.h
+#ifdef _WIN32
+#include <windows.h>
+#endif
 void NormalLogger(std::string message)
 {
     auto time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     std::string time_str = std::ctime(&time);
     time_str.pop_back();
     // print in yellow bold
+    #ifdef _WIN32
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+    std::cout << "[" <<time_str << "]" << ": " << message << std::endl;
+    #else   
     std::cout << "\033[1;33m" << "[" << time_str << "]" << ": " << message << "\033[0m" << std::endl;
+    #endif
 }
 
 // Error logger
@@ -26,7 +35,12 @@ void ErrorLogger(std::string message)
     auto time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     std::string time_string = std::ctime(&time);
     time_string.pop_back();
+    #ifdef _WIN32
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_INTENSITY);
+    std::cout << "[" << time_string << "]" << ": " << message << std::endl;
+    #else
     std::cout << "\033[1;31m" << "[" << time_string << "]"<< ": " << message << "\033[0m" << std::endl;
+    #endif
 }
 
 void NormalLoggerFlush(std::string message)
@@ -35,7 +49,12 @@ void NormalLoggerFlush(std::string message)
     std::string time_str = std::ctime(&time);
     time_str.pop_back();
     // print in yellow bold
+    #ifdef _WIN32
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+    std::cout << "[" <<time_str << "]" << ": " << message << std::endl;
+    #else
     std::cout << "\033[1;33m" << "[" << time_str << "]" << ": " << message << "\033[0m" << "\r";
+    #endif
 }
 
 void ForceTerminate()
