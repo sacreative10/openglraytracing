@@ -83,8 +83,8 @@ void input_callback(GLFWwindow* window)
 }
 
 
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+const unsigned int SCR_WIDTH = 1960;
+const unsigned int SCR_HEIGHT = 1080;
 
 const unsigned short OPENGL_MAJOR_VERSION = 4;
 const unsigned short OPENGL_MINOR_VERSION = 6;

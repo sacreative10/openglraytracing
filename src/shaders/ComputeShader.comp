@@ -4,6 +4,19 @@ layout(rgba32f, binding = 0) uniform image2D screen;
 
 #define INF 1e30
 
+float rand(vec2 co) {
+    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);
+}
+float rand(float x) {
+    return fract(sin(x) * 43758.5453);
+}
+
+
+float clamp(float x, float a, float b) {
+    if(x < a) return a;
+    if(x > b) return b;
+    return x;
+}
 
 struct Ray {
     vec3 origin;
@@ -11,6 +24,36 @@ struct Ray {
 };
 vec3 at(Ray r, float t) {
     return r.origin + t * r.direction;
+}
+
+struct Camera
+{
+    vec3 origin;
+    vec3 lower_left_corner;
+    vec3 horizontal;
+    vec3 vertical;
+};
+// returns a camera with all the settings
+Camera newCamera(float width, float height)
+{
+    Camera camera;
+
+    float aspect_ratio = width / height;
+    float viewport_height = 2.0;
+    float viewport_width = aspect_ratio * viewport_height;
+    float focal_length = 1.0;
+
+    camera.origin = vec3(0.0, 0.0, 0.0);
+    camera.horizontal = vec3(viewport_width, 0.0, 0.0);
+    camera.vertical = vec3(0.0, viewport_height, 0.0);
+    camera.lower_left_corner = camera.origin - camera.horizontal / 2 - camera.vertical / 2 - vec3(0.0, 0.0, focal_length);
+
+    return camera; 
+}
+
+Ray sendRay(Camera cam, float u, float v)
+{
+    return Ray(cam.origin, cam.lower_left_corner + u*cam.horizontal + v*cam.vertical - cam.origin);
 }
 
 struct Sphere {
@@ -64,19 +107,38 @@ bool hit(Ray r, Sphere world[2], float t_min, float t_max, out intersectionInfo 
     return hit_anything;
 }
 
-vec4 rayColor(const Ray r, Sphere world[2])
+
+vec4 skyColor(Ray r)
 {
-    intersectionInfo info;
-    if(hit(r, world, 0, 9999999.9, info))
-    {
-        vec3 color = 0.5 * (info.normal + 1.0);
-        return vec4(color, 1.0);
-    }
     vec3 unitDirection = normalize(r.direction);
     float t = 0.5 * (unitDirection.y + 1.0);
     return mix(vec4(1.0, 1.0, 1.0, 1.0), vec4(0.5, 0.7, 1.0, 1.0), t);
 }
 
+vec4 rayColor(const Ray r, Sphere world[2], int depth)
+{
+    intersectionInfo info;
+    if(hit(r, world, 0, 99999.9, info))
+    {
+        vec3 color = 0.5*(info.normal + 1.0);
+        return vec4(color, 1.0);
+    }
+    return skyColor(r);
+}
+
+void writeColor(vec4 color, int x, int y, int samplesPerPixel)
+{
+    float r = color.x;
+    float g = color.y;
+    float b = color.z;
+
+    float scale = 1.0 / float(samplesPerPixel);
+    r *= scale;
+    g *= scale;
+    b *= scale;
+
+    imageStore(screen, ivec2(x, y), vec4(clamp(r, 0.0, 0.999), clamp(g, 0.0, 0.999), clamp(b, 0.0, 0.999), 1.0));
+}
 
 
 void main()
@@ -88,6 +150,7 @@ void main()
     float viewport_height = 2.0;
     float viewport_width = aspect * viewport_height;
     float focal_length = 1.0;
+    int samplesPerPixel = 10;
 
     // camera
     vec3 origin = vec3(0, 0, 0);
@@ -99,12 +162,14 @@ void main()
     world[0] = Sphere(vec3(0, 0, -1), 0.5);
     world[1] = Sphere(vec3(0, -100.5, -1), 100);
 
-    float u = float(screen_pos.x) / float(screen_size.x - 1);
-    float v = float(screen_pos.y) / float(screen_size.y - 1);
-    vec3 direction = lower_left_corner + u * horizontal + v * vertical;
-    Ray r = Ray(origin, direction);
-
-
-    imageStore(screen, screen_pos, rayColor(r, world)); 
-
+    Camera cam = newCamera(screen_size.x, screen_size.y);   
+    vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
+    for(int i = 0; i < samplesPerPixel; ++i)
+    {
+        float u = float(screen_pos.x) / float(screen_size.x - 1);
+        float v = float(screen_pos.y) / float(screen_size.y - 1);
+        Ray r = sendRay(cam, u, v);
+        color += rayColor(r, world, 10);
+    }
+    writeColor(color, screen_pos.x, screen_pos.y, samplesPerPixel);
 }
