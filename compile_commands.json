@@ -1,0 +1,482 @@
+[
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2  -std=c++20 -g -o CMakeFiles/OpenGLRaytracing.dir/src/GLItems.cpp.o -c /home/sohaibalam/projects/openglraytracing/src/GLItems.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/src/GLItems.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -o CMakeFiles/OpenGLRaytracing.dir/src/glad.c.o -c /home/sohaibalam/projects/openglraytracing/src/glad.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/src/glad.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2  -std=c++20 -g -o CMakeFiles/OpenGLRaytracing.dir/src/logger.cpp.o -c /home/sohaibalam/projects/openglraytracing/src/logger.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/src/logger.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2  -std=c++20 -g -o CMakeFiles/OpenGLRaytracing.dir/src/main.cpp.o -c /home/sohaibalam/projects/openglraytracing/src/main.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/src/main.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2  -std=c++20 -g -o CMakeFiles/OpenGLRaytracing.dir/external/imgui/imgui.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2  -std=c++20 -g -o CMakeFiles/OpenGLRaytracing.dir/external/imgui/imgui_demo.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2  -std=c++20 -g -o CMakeFiles/OpenGLRaytracing.dir/external/imgui/imgui_draw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2  -std=c++20 -g -o CMakeFiles/OpenGLRaytracing.dir/external/imgui/imgui_tables.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2  -std=c++20 -g -o CMakeFiles/OpenGLRaytracing.dir/external/imgui/imgui_widgets.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/src/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2  -std=c++20 -g -o CMakeFiles/OpenGLRaytracing.dir/external/imgui/misc/freetype/imgui_freetype.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/context.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/context.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/context.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/init.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/init.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/init.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/input.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/input.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/input.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/monitor.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/monitor.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/platform.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/platform.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/platform.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/vulkan.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/vulkan.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/window.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/window.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/window.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/egl_context.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/egl_context.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/osmesa_context.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/osmesa_context.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/null_init.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/null_init.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/null_init.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/null_monitor.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/null_monitor.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/null_window.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/null_window.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/null_window.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/null_joystick.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/null_joystick.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/posix_module.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/posix_module.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/posix_time.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/posix_time.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/posix_thread.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/posix_thread.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/x11_init.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/x11_init.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/x11_monitor.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/x11_monitor.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/x11_window.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/x11_window.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/xkb_unicode.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/xkb_unicode.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/glx_context.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/glx_context.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/linux_joystick.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/linux_joystick.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -I/home/sohaibalam/projects/openglraytracing/external/glfw/src -I/home/sohaibalam/projects/openglraytracing/build/external/glfw/src -fPIC -Wall -std=c99 -o external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o -c /home/sohaibalam/projects/openglraytracing/external/glfw/src/posix_poll.c",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/glfw/src/posix_poll.c"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl2.dir/examples/example_glfw_opengl2/main.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_glfw_opengl2/main.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_glfw_opengl2/main.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_demo.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_draw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_tables.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_widgets.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl2.dir/misc/freetype/imgui_freetype.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_glfw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_glfw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_glfw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_opengl2.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_opengl2.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_opengl2.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl3.dir/examples/example_glfw_opengl3/main.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_glfw_opengl3/main.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_glfw_opengl3/main.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_demo.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_draw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_tables.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_widgets.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl3.dir/misc/freetype/imgui_freetype.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_glfw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_glfw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_glfw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_opengl3.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_opengl3.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_vulkan.dir/examples/example_glfw_vulkan/main.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_glfw_vulkan/main.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_glfw_vulkan/main.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_demo.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_draw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_tables.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_widgets.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_vulkan.dir/misc/freetype/imgui_freetype.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_glfw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_glfw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_glfw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -I/home/sohaibalam/projects/openglraytracing/external/glfw/include -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_vulkan.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_vulkan.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_vulkan.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl2.dir/examples/example_sdl_opengl2/main.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_sdl_opengl2/main.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_sdl_opengl2/main.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl2.dir/imgui.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl2.dir/imgui_demo.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl2.dir/imgui_draw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl2.dir/imgui_tables.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl2.dir/imgui_widgets.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl2.dir/misc/freetype/imgui_freetype.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl2.dir/backends/imgui_impl_sdl.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdl.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdl.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl2.dir/backends/imgui_impl_opengl2.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_opengl2.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_opengl2.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl3.dir/examples/example_sdl_opengl3/main.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_sdl_opengl3/main.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_sdl_opengl3/main.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl3.dir/imgui.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl3.dir/imgui_demo.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl3.dir/imgui_draw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl3.dir/imgui_tables.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl3.dir/imgui_widgets.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl3.dir/misc/freetype/imgui_freetype.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl3.dir/backends/imgui_impl_sdl.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdl.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdl.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_opengl3.dir/backends/imgui_impl_opengl3.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_opengl3.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_vulkan.dir/examples/example_sdl_vulkan/main.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_sdl_vulkan/main.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_sdl_vulkan/main.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_vulkan.dir/imgui.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_vulkan.dir/imgui_demo.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_vulkan.dir/imgui_draw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_vulkan.dir/imgui_tables.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_vulkan.dir/imgui_widgets.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_vulkan.dir/misc/freetype/imgui_freetype.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_vulkan.dir/backends/imgui_impl_sdl.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdl.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdl.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_vulkan.dir/backends/imgui_impl_vulkan.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_vulkan.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_vulkan.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_sdlrenderer.dir/examples/example_sdl_sdlrenderer/main.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_sdl_sdlrenderer/main.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/examples/example_sdl_sdlrenderer/main.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_sdlrenderer.dir/imgui.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_sdlrenderer.dir/imgui_demo.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_sdlrenderer.dir/imgui_draw.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_sdlrenderer.dir/imgui_tables.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_sdlrenderer.dir/imgui_widgets.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_sdlrenderer.dir/misc/freetype/imgui_freetype.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/misc/freetype/imgui_freetype.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_sdlrenderer.dir/backends/imgui_impl_sdl.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdl.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdl.cpp"
+},
+{
+  "directory": "/home/sohaibalam/projects/openglraytracing/build",
+  "command": "/usr/lib64/ccache/c++ -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_ENABLE_FREETYPE=1 -I/home/sohaibalam/projects/openglraytracing/external/imgui -I/usr/include/freetype2 -isystem /home/sohaibalam/projects/openglraytracing/external/imgui/backends -isystem /usr/include/SDL2  -std=c++20 -g -Wall -Wextra -Wunused-parameter -Wformat -pedantic -Wnarrowing -Wno-class-memaccess -std=gnu++11 -o external/imgui/CMakeFiles/example_sdl_sdlrenderer.dir/backends/imgui_impl_sdlrenderer.cpp.o -c /home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdlrenderer.cpp",
+  "file": "/home/sohaibalam/projects/openglraytracing/external/imgui/backends/imgui_impl_sdlrenderer.cpp"
+}
+]

@@ -1,309 +1,267 @@
+#include "backends/imgui_impl_glfw.h"
+#include "backends/imgui_impl_glfw.h"
+#include "backends/imgui_impl_opengl3.h"
 #include "include/glad/glad.h"
 #include <GLFW/glfw3.h>
-
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <cmath>
-#include <chrono>
+#include <glm/fwd.hpp>
+#include <glm/glm.hpp>
 #include <vector>
-// if on Windows, include windows.h
-#ifdef _WIN32
-#include <windows.h>
-#endif
-void NormalLogger(std::string message)
-{
-    auto time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-    std::string time_str = std::ctime(&time);
-    time_str.pop_back();
-    // print in yellow bold
-    #ifdef _WIN32
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-    std::cout << "[" <<time_str << "]" << ": " << message << std::endl;
-    #else   
-    std::cout << "\033[1;33m" << "[" << time_str << "]" << ": " << message << "\033[0m" << std::endl;
-    #endif
-}
+#include <chrono>
+#include "logger.h"
+#include "GLItems.h"
 
-// Error logger
-// In red color outputs the message in bold
-// takes the message as a parameter
-// and the message is printed to the console, along with the time
-void ErrorLogger(std::string message)
-{
-    // time in hours, minutes, seconds
-    auto time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-    std::string time_string = std::ctime(&time);
-    time_string.pop_back();
-    #ifdef _WIN32
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_INTENSITY);
-    std::cout << "[" << time_string << "]" << ": " << message << std::endl;
-    #else
-    std::cout << "\033[1;31m" << "[" << time_string << "]"<< ": " << message << "\033[0m" << std::endl;
-    #endif
-}
-
-void NormalLoggerFlush(std::string message)
-{
-    auto time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-    std::string time_str = std::ctime(&time);
-    time_str.pop_back();
-    // print in yellow bold
-    #ifdef _WIN32
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-    std::cout << "[" <<time_str << "]" << ": " << message << std::endl;
-    #else
-    std::cout << "\033[1;33m" << "[" << time_str << "]" << ": " << message << "\033[0m" << "\r";
-    #endif
-}
-
-void ForceTerminate()
-{
-    ErrorLogger("Forcing termination, this is a fatal error");
-    glfwTerminate();
-    exit(EXIT_FAILURE);
-}
+#include <imgui.h>
 
 
-void error_callback(int error, const char* description)
-{
-    ErrorLogger(description);
-}
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    NormalLogger("Framebuffer size changed to " + std::to_string(width) + "x" + std::to_string(height));
-    glViewport(0, 0, width, height);
-}
-
-void input_callback(GLFWwindow* window)
-{
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
-
-
-const unsigned int SCR_WIDTH = 1960;
-const unsigned int SCR_HEIGHT = 1080;
+const unsigned int SCR_WIDTH = 800;
+const unsigned int SCR_HEIGHT = 400;
 
 const unsigned short OPENGL_MAJOR_VERSION = 4;
 const unsigned short OPENGL_MINOR_VERSION = 6;
 
-bool vSync = true;
 
 GLfloat ScreenTriVert[] =
 {
-    -1.0f, -1.0f, 0.0f, 0.0f, 0.0f,
-        -1.0f,  1.0f, 0.0f, 0.0f, 1.0f,
-        1.0f,  1.0f, 0.0f, 1.0f, 1.0f,
-        1.0f, -1.0f, 0.0f, 1.0f, 0.0f,
-    };
+	-1.0f, -1.0f, 0.0f, 0.0f, 0.0f,
+	-1.0f,  1.0f, 0.0f, 0.0f, 1.0f,
+	1.0f,  1.0f, 0.0f, 1.0f, 1.0f,
+	1.0f, -1.0f, 0.0f, 1.0f, 0.0f,
+};
 
 GLuint ScreenTriIndices[] =
 {
-    0, 2, 1,
-    0, 3, 2
+	0, 2, 1,
+	0, 3, 2
 };
 
-GLuint FileToShader(const char* filename, GLenum shaderType)
+glm::vec3 cameraPos = glm::vec3(13.0f, 2.0f, 3.0f);
+glm::vec3 lookingAt = glm::vec3(0.0f, 0.0f, 0.0f);
+bool rotate = false;
+
+bool vSync = true;
+
+void error_callback(int error, const char* description)
 {
-    std::ifstream file(filename);
-    std::string shaderSource;
-    std::string line;
-
-    if(file.is_open())
-    {
-        while(std::getline(file, line))
-            shaderSource += line + "\n";
-        file.close();
-    }
-    else
-    {
-        ErrorLogger("Failed to open file: " + std::string(filename));
-        ForceTerminate();
-        return 0;
-    }
-
-    GLuint shader = glCreateShader(shaderType);
-    const char* source = shaderSource.c_str();
-    glShaderSource(shader, 1, &source, NULL);
-    glCompileShader(shader);
-
-    GLint success;
-    GLchar infoLog[512];
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
-    if(!success)
-    {
-        glGetShaderInfoLog(shader, 512, NULL, infoLog);
-        // TODO: Only add infoLog if in DEBUG mode
-        ErrorLogger("Failed to compile shader: " + std::string(infoLog));
-        glDeleteShader(shader);
-        ForceTerminate();
-        return 0;
-    }
-    NormalLogger("Compiled shader: " + std::string(filename));
-    return shader;
+	logger::Log(logger::LogLevel::ERROR, std::string("GLFW error: ") + description);
 }
 
-GLuint createShaderProgram(std::vector<GLuint> shaders)
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-    GLuint shaderProgram = glCreateProgram();
-    for(GLuint shader : shaders)
-        glAttachShader(shaderProgram, shader);
-    glLinkProgram(shaderProgram);
-
-    GLint success;
-    GLchar infoLog[512];
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-    if(!success)
-    {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        // TODO: Only add infoLog if in DEBUG mode
-        ErrorLogger("Failed to link shader program: " + std::string(infoLog));
-        glDeleteProgram(shaderProgram);
-        ForceTerminate();
-        return 0;
-    }
-    NormalLogger("Linked shader program");
-    return shaderProgram;
+	logger::Log(logger::LogLevel::INFO, std::string("Framebuffer size changed to ") + std::to_string(width) + "x" + std::to_string(height));
+	glViewport(0, 0, width, height);
 }
-void DeleteShader(GLuint shader)
+
+void input_callback(GLFWwindow* window)
 {
-    NormalLogger("Cleaning up shader: " + std::to_string(shader));
-    glDeleteShader(shader);
+	if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, true);
+}
+
+
+// This function generates and binds all the objects arrays. Edit this to your liking.
+std::vector<GLuint> alltheobjects(GLfloat (&Vertices)[], GLuint Indicies[])
+{
+	GLuint VAO, VBO, EBO;
+	glCreateVertexArrays(1, &VAO);
+	glCreateBuffers(1, &VBO);
+	glCreateBuffers(1, &EBO);
+
+	glNamedBufferData(VBO, sizeof(ScreenTriVert), ScreenTriVert, GL_STATIC_DRAW);
+	glNamedBufferData(EBO, sizeof(ScreenTriIndices), ScreenTriIndices, GL_STATIC_DRAW);
+
+	glEnableVertexArrayAttrib(VAO, 0);
+	glVertexArrayAttribBinding(VAO, 0, 0);
+	glVertexArrayAttribFormat(VAO, 0, 3, GL_FLOAT, GL_FALSE, 0);
+
+	glEnableVertexArrayAttrib(VAO, 1);
+	glVertexArrayAttribBinding(VAO, 1, 0);
+	glVertexArrayAttribFormat(VAO, 1, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 3);
+
+	glVertexArrayVertexBuffer(VAO, 0, VBO, 0, sizeof(GLfloat) * 5);
+	glVertexArrayElementBuffer(VAO, EBO);
+	return std::vector<GLuint>{VAO, VBO, EBO};
 }
 
 
 int main()
 {
-    glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, OPENGL_MAJOR_VERSION);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, OPENGL_MINOR_VERSION);
-    glfwWindowHint(GLFW_OPENGL_CORE_PROFILE, GL_TRUE);
-    NormalLogger("Initialising with OpenGL version: " + std::to_string(OPENGL_MAJOR_VERSION) + "." + std::to_string(OPENGL_MINOR_VERSION));
-    glfwSetErrorCallback(error_callback);
+	glfwInit();
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, OPENGL_MAJOR_VERSION);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, OPENGL_MINOR_VERSION);
+	glfwWindowHint(GLFW_OPENGL_CORE_PROFILE, GL_TRUE);
+	glfwSetErrorCallback(error_callback);
 
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Raytracing In OpenGL", NULL, NULL);
-    if(!window)
-    {
-        ErrorLogger("Failed to create window");
-        ForceTerminate();
-        return EXIT_FAILURE;
-    }
-    glfwMakeContextCurrent(window);
-    // vsync
-    if(vSync){
-        glfwSwapInterval(1);
-        NormalLogger("Running with vsync");
-    }
-    else {
-        glfwSwapInterval(0);
-        NormalLogger("Running without vsync");
-    }
-    // load glad
-    if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        ErrorLogger("Failed to initialize GLAD");
-        ForceTerminate();
-        return EXIT_FAILURE;
-    }
-    NormalLogger("Loaded glad");
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
+	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Raytracing In OpenGL", NULL, NULL);
+	logger::Log(logger::LogLevel::INFO, std::string("GL window created with OpenGL version ") + std::to_string(OPENGL_MAJOR_VERSION) + "." + std::to_string(OPENGL_MINOR_VERSION));
 
-    GLuint VAO, VBO, EBO;
-    glCreateVertexArrays(1, &VAO);
-    glCreateBuffers(1, &VBO);
-    glCreateBuffers(1, &EBO);
+	if(!window)
+	{
+		logger::Log(logger::LogLevel::FATAL, std::string("Failed to create GL window"));
+		ForceTerminate();
+		return EXIT_FAILURE;
+	}
+	glfwMakeContextCurrent(window);
 
-    glNamedBufferData(VBO, sizeof(ScreenTriVert), ScreenTriVert, GL_STATIC_DRAW);
-    glNamedBufferData(EBO, sizeof(ScreenTriIndices), ScreenTriIndices, GL_STATIC_DRAW);
+	// vsync
+	if(vSync){
+		glfwSwapInterval(1);
+		logger::Log(logger::LogLevel::INFO, std::string("V-Sync enabled"));
+	}
+	else {
+		glfwSwapInterval(0);
+		logger::Log(logger::LogLevel::INFO, std::string("V-Sync disabled"));
+	}
 
-    glEnableVertexArrayAttrib(VAO, 0);
-    glVertexArrayAttribBinding(VAO, 0, 0);
-    glVertexArrayAttribFormat(VAO, 0, 3, GL_FLOAT, GL_FALSE, 0);
+	// loading glad
+	if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+	{
+		logger::Log(logger::LogLevel::FATAL, std::string("Failed to initialize GLAD"));
+		ForceTerminate();
+		return EXIT_FAILURE;
+	}
 
-    glEnableVertexArrayAttrib(VAO, 1);
-    glVertexArrayAttribBinding(VAO, 1, 0);
-    glVertexArrayAttribFormat(VAO, 1, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 3);
+	logger::Log(logger::LogLevel::INFO, std::string("GLAD initialized"));
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
 
-    glVertexArrayVertexBuffer(VAO, 0, VBO, 0, sizeof(GLfloat) * 5);
-    glVertexArrayElementBuffer(VAO, EBO);
+	GLuint VAO, VBO, EBO;
 
-    GLuint screenTex;
-    glCreateTextures(GL_TEXTURE_2D, 1, &screenTex);
-    glTextureParameteri(screenTex, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTextureParameteri(screenTex, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glTextureParameteri(screenTex, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTextureParameteri(screenTex, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTextureStorage2D(screenTex, 1, GL_RGBA32F, SCR_WIDTH, SCR_HEIGHT);
-    glBindImageTexture(0, screenTex, 0, GL_FALSE, 0, GL_WRITE_ONLY, GL_RGBA32F);
+	std::vector<GLuint> objects = alltheobjects(ScreenTriVert, ScreenTriIndices);
+	VAO = objects[0];
+	VBO = objects[1];
+	EBO = objects[2];
 
-    GLuint screenVertexShader = FileToShader("../src/shaders/ScreenVertexShader.vert", GL_VERTEX_SHADER);
-    GLuint screenFragmentShader = FileToShader("../src/shaders/ScreenFragmentShader.frag", GL_FRAGMENT_SHADER);
-    GLuint screenShaderProgram = createShaderProgram({screenVertexShader, screenFragmentShader});
+	GLuint screenTex;
+	glCreateTextures(GL_TEXTURE_2D, 1, &screenTex);
+	glTextureParameteri(screenTex, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTextureParameteri(screenTex, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTextureParameteri(screenTex, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTextureParameteri(screenTex, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+	glTextureStorage2D(screenTex, 1, GL_RGBA32F, SCR_WIDTH, SCR_HEIGHT);
+	glBindImageTexture(0, screenTex, 0, GL_FALSE, 0, GL_WRITE_ONLY, GL_RGBA32F);
 
-    DeleteShader(screenVertexShader);
-    DeleteShader(screenFragmentShader);
+	GLuint screenVertexShader = loadShader("../src/shaders/ScreenVertexShader.vert", GL_VERTEX_SHADER);
+	GLuint screenFragmentShader = loadShader("../src/shaders/ScreenFragmentShader.frag", GL_FRAGMENT_SHADER);
+	GLuint screenShaderProgram = createShaderProgram(std::vector<GLuint>{screenVertexShader, screenFragmentShader});
 
-    GLuint ComputeShader = FileToShader("../src/shaders/ComputeShader.comp", GL_COMPUTE_SHADER);
-    GLuint ComputeShaderProgram = createShaderProgram({ComputeShader});
+	DeleteGLItem(screenVertexShader);
+	DeleteGLItem(screenFragmentShader);
 
-    DeleteShader(ComputeShader);
+	GLuint ComputeShader = loadShader("../src/shaders/ComputeShader.comp", GL_COMPUTE_SHADER);
+	GLuint ComputeShaderProgram = createShaderProgram({ComputeShader});
 
-    int workGroupCurrent[3];
-    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_COUNT, 0, &workGroupCurrent[0]);
-    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_COUNT, 1, &workGroupCurrent[1]);
-    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_COUNT, 2, &workGroupCurrent[2]);
-    NormalLogger("Max work group count: " + std::to_string(workGroupCurrent[0]) + " " + std::to_string(workGroupCurrent[1]) + " " + std::to_string(workGroupCurrent[2]));
+	DeleteGLItem(ComputeShader);
 
-    int workGroupSize[3];
-    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_SIZE, 0, &workGroupSize[0]);
-    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_SIZE, 1, &workGroupSize[1]);
-    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_SIZE, 2, &workGroupSize[2]);
-    NormalLogger("Max work group size: " + std::to_string(workGroupSize[0]) + " " + std::to_string(workGroupSize[1]) + " " + std::to_string(workGroupSize[2]));
+	int workGroupCurrent[3];
+	glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_COUNT, 0, &workGroupCurrent[0]);
+	glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_COUNT, 1, &workGroupCurrent[1]);
+	glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_COUNT, 2, &workGroupCurrent[2]);
+	logger::Log(logger::LogLevel::DEBUG, std::string("Max work group count: ") + std::to_string(workGroupCurrent[0]) + " " + std::to_string(workGroupCurrent[1]) + " " + std::to_string(workGroupCurrent[2]));
 
-    int workGroupInv;
-    glGetIntegerv(GL_MAX_COMPUTE_WORK_GROUP_INVOCATIONS, &workGroupInv);
-    NormalLogger("Max work group invocations: " + std::to_string(workGroupInv));
+	int workGroupSize[3];
+	glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_SIZE, 0, &workGroupSize[0]);
+	glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_SIZE, 1, &workGroupSize[1]);
+	glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_SIZE, 2, &workGroupSize[2]);
+	logger::Log(logger::LogLevel::DEBUG, std::string("Max work group size: ") + std::to_string(workGroupSize[0]) + " " + std::to_string(workGroupSize[1]) + " " + std::to_string(workGroupSize[2]));
 
-    std::chrono::duration<double> meanFPS;
-    auto prevTime = std::chrono::high_resolution_clock::now();
-    int frameCount = 0;
+	int workGroupInv;
+	glGetIntegerv(GL_MAX_COMPUTE_WORK_GROUP_INVOCATIONS, &workGroupInv);
+	logger::Log(logger::LogLevel::DEBUG, std::string("Max work group invocations: ") + std::to_string(workGroupInv));
 
-    while(!glfwWindowShouldClose(window))
-    {
-        auto currentTime = std::chrono::high_resolution_clock::now();
-        frameCount++;
-        input_callback(window);
-        glUseProgram(ComputeShaderProgram);
-        glDispatchCompute(ceil(SCR_WIDTH / 8), ceil(SCR_HEIGHT / 4), 1);
-        glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+	std::chrono::duration<double> meanFPS;
+	auto startTime = std::chrono::high_resolution_clock::now();
+	int frameCount = 0;
 
-        glUseProgram(screenShaderProgram);
-        glBindTextureUnit(0, screenTex);
-        glUniform1i(glGetUniformLocation(screenShaderProgram, "screenTex"), 0);
-        glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, sizeof(ScreenTriIndices) / sizeof(ScreenTriIndices[0]), GL_UNSIGNED_INT, 0);
+	bool show_demo_window = true;
 
-        glfwSwapBuffers(window);
-        glfwPollEvents();
-        if(frameCount % 100 == 0)
-        {
-            auto currTime = std::chrono::high_resolution_clock::now();
-            meanFPS = (currTime - prevTime) / 100;
-            prevTime = currTime;
-            NormalLogger("FPS: " + std::to_string(1 / meanFPS.count())); 
-        }
-    }
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGui::StyleColorsDark();
 
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
-    glDeleteTextures(1, &screenTex);
-    glDeleteProgram(screenShaderProgram);
-    glDeleteProgram(ComputeShaderProgram);
-    ErrorLogger("Application Finished, Terminating");
-    glfwTerminate();
-    return EXIT_SUCCESS;
+	ImGuiIO& io = ImGui::GetIO(); 
+	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+	io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
+
+	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplOpenGL3_Init("#version 460");
+
+	int MAXDEPTH = 2;
+	int NUM_SAMPLES = 2;
+
+	while(!glfwWindowShouldClose(window))
+	{
+		glfwPollEvents();
+		frameCount++;
+		input_callback(window);
+		if(rotate){
+			float angle = 0.05f;
+			glm::mat4 rotationMatrix = glm::mat4(cos(angle), 0.0, sin(angle), 0.0,
+					0.0, 1.0,        0.0, 0.0,
+					-sin(angle),  0.0, cos(angle), 0.0,
+					0.0,  0.0,        0.0, 1.0);
+			cameraPos = glm::vec3(rotationMatrix * glm::vec4(cameraPos, 1.0));
+		}
+		glUseProgram(ComputeShaderProgram);
+		// time elapsed since the beginning of the program
+		glUniform1f(glGetUniformLocation(ComputeShaderProgram, "time"), glfwGetTime());
+		glUniform3f(glGetUniformLocation(ComputeShaderProgram, "lookFrom"), cameraPos.x, cameraPos.y, cameraPos.z);
+		glUniform3f(glGetUniformLocation(ComputeShaderProgram, "lookAt"), lookingAt.x, lookingAt.y, lookingAt.z);
+		glUniform1iv(glGetUniformLocation(ComputeShaderProgram, "MAXDEPTHi"), 1, &MAXDEPTH);
+		glUniform1iv(glGetUniformLocation(ComputeShaderProgram, "NUMSAMPLESi"), 1, &NUM_SAMPLES);
+		glDispatchCompute(ceil(SCR_WIDTH / 8), ceil(SCR_HEIGHT / 4), 1);
+		glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+
+		glUseProgram(screenShaderProgram);
+		glBindTextureUnit(0, screenTex);
+		glUniform1i(glGetUniformLocation(screenShaderProgram, "screenTex"), 0);
+		glBindVertexArray(VAO);
+		glDrawElements(GL_TRIANGLES, sizeof(ScreenTriIndices) / sizeof(ScreenTriIndices[0]), GL_UNSIGNED_INT, 0);
+
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		ImGui::Begin("Settings");
+		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+		ImGui::Checkbox("Rotate", &rotate);
+		ImGui::Text("Camera Position: %.3f %.3f %.3f", cameraPos.x, cameraPos.y, cameraPos.z);
+		ImGui::Text("Looking At: %.3f %.3f %.3f", lookingAt.x, lookingAt.y, lookingAt.z);
+		ImGui::SliderFloat3("Camera Position", &cameraPos.x, -10.0f, 10.0f);
+		ImGui::SliderFloat3("Looking At", &lookingAt.x, -10.0f, 10.0f);
+		
+		ImGui::Text("Max Depth: %d", MAXDEPTH);
+		ImGui::SliderInt("Max Depth", &MAXDEPTH, 1, 10);
+
+		ImGui::Text("Number of Samples: %d", NUM_SAMPLES);
+		ImGui::SliderInt("Number of Samples", &NUM_SAMPLES, 1, 10);
+
+		ImGui::End();
+		ImGui::Render();
+
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+		if(io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+		{
+			GLFWwindow* backup_current_context = glfwGetCurrentContext();
+			ImGui::UpdatePlatformWindows();
+			ImGui::RenderPlatformWindowsDefault();
+			glfwMakeContextCurrent(backup_current_context);
+		}
+		glfwSwapBuffers(window);
+	}
+
+	glDeleteVertexArrays(1, &VAO);
+	glDeleteBuffers(1, &VBO);
+	glDeleteBuffers(1, &EBO);
+	glDeleteTextures(1, &screenTex);
+	glDeleteProgram(screenShaderProgram);
+	glDeleteProgram(ComputeShaderProgram);
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+	ImGui::DestroyContext();
+	glfwDestroyWindow(window);
+	glfwTerminate();
+	logger::Log(logger::LogLevel::DEBUG, "Shutting down...");
+	return EXIT_SUCCESS;
 }
